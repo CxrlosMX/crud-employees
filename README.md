@@ -8,6 +8,11 @@ Este proyecto es una API RESTful desarrollada en Java utilizando el framework Sp
 - **Maven**
 - **MySQL Server**
 
+## Queries
+create database crudbasico;
+
+select * from employees;
+
 ## Configuración del Proyecto
 
 1. **Clonar el Repositorio**
