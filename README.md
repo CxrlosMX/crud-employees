@@ -16,3 +16,36 @@ Este proyecto es una API RESTful desarrollada en Java utilizando el framework Sp
    git clone https://github.com/tuusuario/crud-employees.git
    cd crud-employees
 
+## Clase `Employee`
+
+La clase `Employee` es una entidad JPA que representa a un empleado en la base de datos. A continuación se muestra el código de la clase:
+
+```
+@Entity(name = "employees")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Employee {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @NotBlank(message = "The name is required")
+    private String name;
+
+    @NotBlank(message = "The position is required")
+    private String position;
+
+    @Min(value = 0L, message = "The value must be positive")
+    private Double salary;
+
+    @PastOrPresent(message = "The date needs to be past or present, not future")
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private Date hiringDate;
+}
+```
+
+# Endpoints de la API
+
+
