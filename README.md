@@ -48,4 +48,8 @@ public class Employee {
 
 # Endpoints de la API
 
+## Get All 
+Obtiene todos los registros de la base de datos
+![Image getAll](https://github.com/yourusername/yourrepository/blob/main/path/to/image.png)
+
 
