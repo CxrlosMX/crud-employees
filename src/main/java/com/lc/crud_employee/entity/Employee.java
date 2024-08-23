@@ -1,5 +1,6 @@
 package com.lc.crud_employee.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
@@ -7,6 +8,7 @@ import jakarta.validation.constraints.PastOrPresent;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -42,6 +44,7 @@ public class Employee {
     private Double salary;
 
     @PastOrPresent(message = "The date needs to be past or present, not future")
+    @JsonFormat(pattern="yyyy-MM-dd")
     private Date hiringDate;
 
 }
