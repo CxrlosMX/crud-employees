@@ -60,6 +60,10 @@ public class Employee {
 - **Agrega un nuevo empleado en la base de datos**
 ![Image create](https://github.com/CxrlosMX/crud-employees/blob/main/src/main/resources/assets/img_3.png)
 
+## PUT 
+- **Actualiza un registro dentro de la base de datos**
+![Image getAll](https://github.com/CxrlosMX/crud-employees/blob/main/src/main/resources/assets/img_5.png)
+
 ## DELETE
 - **Elimina un registro de la base de datos**
 ![Image delete](https://github.com/CxrlosMX/crud-employees/blob/main/src/main/resources/assets/img_4.png)
