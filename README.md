@@ -48,8 +48,20 @@ public class Employee {
 
 # Endpoints de la API
 
-## Get All 
-Obtiene todos los registros de la base de datos
-![Image getAll](https://github.com/yourusername/yourrepository/blob/main/path/to/image.png)
+## GET All 
+- **Obtiene todos los registros de la base de datos**
+![Image getAll](https://github.com/CxrlosMX/crud-employees/blob/main/src/main/resources/assets/img_1.png)
+
+## GET BY ID
+- **Obtiene un registro por ID**
+![Image getByID](https://github.com/CxrlosMX/crud-employees/blob/main/src/main/resources/assets/img_2.png)
+
+## POST
+- **Agrega un nuevo empleado en la base de datos**
+![Image create](https://github.com/CxrlosMX/crud-employees/blob/main/src/main/resources/assets/img_3.png)
+
+## DELETE
+- **Elimina un registro de la base de datos**
+![Image delete](https://github.com/CxrlosMX/crud-employees/blob/main/src/main/resources/assets/img_4.png)
 
 
