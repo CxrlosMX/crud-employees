@@ -18,11 +18,19 @@ public class EmployeeController {
     @Autowired
     private ServiceEmployeeImpl serviceEmployee;
 
+
+    /**
+     * @return list of all employees
+     */
     @GetMapping("/get-all")
     public List<Employee> getAll() {
         return serviceEmployee.findAll();
     }
 
+    /**
+     * @param id
+     * @return status of endpoint
+     */
     @GetMapping("/find-by-id/{id}")
     public ResponseEntity<Employee> findById(@PathVariable Long id) {
         Optional<Employee> empleado = serviceEmployee.findById(id);
@@ -30,12 +38,23 @@ public class EmployeeController {
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
+    /**
+     *
+     * @param employee
+     * @return new employee created
+     */
     @PostMapping("/create")
     public ResponseEntity<Employee> create(@RequestBody Employee employee) {
         Employee nuevoEmpleado = serviceEmployee.saveOrUpdates(employee);
         return new ResponseEntity<>(nuevoEmpleado, HttpStatus.CREATED);
     }
 
+    /**
+     *
+     * @param id
+     * @param employee
+     * @return status
+     */
     @PutMapping("/update/{id}")
     public ResponseEntity<Employee> updateEmployee(@PathVariable Long id, @Valid @RequestBody Employee employee) {
         Optional<Employee> exist = serviceEmployee.findById(id);
@@ -51,6 +70,11 @@ public class EmployeeController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
+    /**
+     *
+     * @param id
+     * @return return status
+     */
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Employee> delete(@PathVariable Long id) {
         Optional<Employee> employeeById = serviceEmployee.findById(id);

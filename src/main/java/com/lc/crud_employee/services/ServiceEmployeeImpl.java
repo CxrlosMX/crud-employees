@@ -14,21 +14,39 @@ public class ServiceEmployeeImpl implements IServiceEmployee {
     @Autowired
     private IRepositoryEmployee repositoryEmployee;
 
+    /**
+     *
+     * @param employee
+     * @return Employee
+     */
     @Override
     public Employee saveOrUpdates(Employee employee) {
     return repositoryEmployee.save(employee);
     }
 
+    /**
+     *
+     * @param id
+     * @return Optional
+     */
     @Override
     public Optional<Employee> findById(Long id) {
         return repositoryEmployee.findById(id);
     }
 
+    /**
+     *
+     * @return all employees
+     */
     @Override
     public List<Employee> findAll() {
         return repositoryEmployee.findAll();
     }
 
+    /**
+     *
+     * @param id
+     */
     @Override
     public void deleteById(Long id) {
         repositoryEmployee.deleteById(id);
