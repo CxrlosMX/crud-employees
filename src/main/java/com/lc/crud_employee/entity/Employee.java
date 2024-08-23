@@ -21,14 +21,6 @@ import java.util.Date;
 @AllArgsConstructor
 public class Employee {
 
-/**
- * - La entidad "Empleado" debe tener los siguientes campos: `id`, `nombre`, `puesto`, `salario`, `fechaContratacion`.
- *
- * - Implementar validaciones básicas (por ejemplo, que el `nombre` no esté vacío y que el `salario` sea un número positivo, etc). Las validaciones que consideres necesarias para que no ocurran errores inesperados.
- *
- * - Se tiene libertad para usar MongoDB, Oracle o MySQL para la implementación de la base de datos
- *
- * **/
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
