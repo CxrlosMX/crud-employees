@@ -4,7 +4,7 @@ Este proyecto es una API RESTful desarrollada en Java utilizando el framework Sp
 
 ## Requisitos
 
-- **Java 11** o superior
+- **Java 17** o superior
 - **Maven**
 - **MySQL Server**
 
